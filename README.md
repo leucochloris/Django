@@ -1,2 +1,2 @@
 ### Django
-Creat a simple site (blog) - exploring the framework DJANGO
+Create simple site (blog) - exploring the framework DJANGO
