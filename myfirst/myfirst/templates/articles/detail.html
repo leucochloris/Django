@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
-
 {% block title %}{{article.article_title}}{% endblock %}
-
 {% block content %}
 
 
@@ -13,12 +11,12 @@
 <hr>
 
 {% if latest_comment_list %}
-    {% for c in latest_comment_list %}
-        <p>
-            <strong>{{c.author_name}}</strong>
-            <p>{{c.comment_text}}</p>
-        </p>
-    {% endfor %}
+
+{% for c in latest_comment_list %}
+<p><strong>{{c.author_name}}</strong>
+    <p>{{c.coment_text}}</p></p>
+{% endfor %}
+
 {% else %}
 Коментарии НЕ найдены...
 {% endif %}
@@ -29,10 +27,10 @@
 
     {% csrf_token %}
 
-    <input type="text" required placeholder="Ваше имя" name="name"><br>
+    <input type="text" required="" placeholder="Ваше имя" name="name"><br>
     <textarea name="text" required="" placeholder="Текст коментария" cols="30" rows="10"></textarea><br>
 
-<button type="submit">Оставить комментарий</button>
+    <button type="submit">Оставить комментарий</button>
 
 </form>
 
